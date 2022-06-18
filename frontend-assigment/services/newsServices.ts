@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { New } from "../models/new";
 const options = {
   method: "GET",
   url: "https://free-news.p.rapidapi.com/v1/search",
@@ -10,13 +10,6 @@ const options = {
   },
 };
 
-export const getNews = () => {
-  axios
-    .request(options)
-    .then(function (response) {
-      console.log(response.data);
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
+export const getNews = (): Promise<any> => {
+  return axios.request(options);
 };

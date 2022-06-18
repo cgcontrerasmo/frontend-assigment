@@ -1,0 +1,19 @@
+.containerSearch {
+  width: fit-content;
+  .containerButton {
+    width: fit-content;
+    .buttonSearch {
+      border-radius: 5px 0px 0px 0px;
+      background: white;
+      .bi {
+        color: green;
+      }
+    }
+  }
+  .containerInput {
+    width: fit-content;
+    .inputSearch {
+      border-radius: 0px 0px 5px 0px;
+    }
+  }
+}
