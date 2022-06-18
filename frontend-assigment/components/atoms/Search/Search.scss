@@ -3,17 +3,24 @@
   .containerButton {
     width: fit-content;
     .buttonSearch {
-      border-radius: 5px 0px 0px 0px;
+      border-radius: 10px 0px 0px 0px;
+      border: none;
       background: white;
+      margin-right: 2px;
+      width: 40px;
       .bi {
         color: green;
+        font-size: 25px;
       }
     }
   }
   .containerInput {
     width: fit-content;
     .inputSearch {
-      border-radius: 0px 0px 5px 0px;
+      border: none;
+      border-radius: 0px 0px 10px 0px;
+      width: 420px;
+      padding: 8px;
     }
   }
 }

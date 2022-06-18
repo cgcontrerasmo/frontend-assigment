@@ -10,7 +10,7 @@ const Header: FC<Props> = ({}) => {
       <div className="container-fluid">
         <div className="col-3 d-flex justify-content-center">
           <Image
-            src="/images/logoDocRed.png"
+            src="/images/logo-docred-color.svg"
             alt="logoDocRed"
             width="100%"
             height="100%"
@@ -26,7 +26,9 @@ const Header: FC<Props> = ({}) => {
                 className="collapse navbar-collapse"
                 id="navbarSupportedContent"
               >
-                <i className="bi bi-house-door" />
+                <button className="button">
+                  <i className="bi bi-house-door" />
+                </button>
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item dropdown">
                     <a
@@ -67,10 +69,14 @@ const Header: FC<Props> = ({}) => {
         <div className="col-3">
           <div className="row align-items-center">
             <div className="col d-flex justify-content-center">
-              <i className="bi bi-bell" />
+              <button className="button">
+                <i className="bi bi-bell" />
+              </button>
             </div>
             <div className="col d-flex justify-content-center">
-              <i className="bi bi-gear" />
+              <button className="button">
+                <i className="bi bi-gear" />
+              </button>
             </div>
           </div>
         </div>

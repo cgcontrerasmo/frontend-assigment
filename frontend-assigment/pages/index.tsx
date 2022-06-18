@@ -34,18 +34,23 @@ const Home: NextPage = () => {
   }, [news]);
 
   return (
-    <>
+    <div className="containerIndex">
       <Header />
-      <div className={styles.container}>
-        {news.length > 0 &&
-          news.map((el, index) => {
-            return <NewCard new={el} key={index} />;
-          })}
-        <NewCard new={news[0]} />
+      <div className="container">
+        <div className="row">
+          <div className="col-8">
+            <BodyNews />
+          </div>
+          <div className="col-4">
+            {news.length > 0 &&
+              news.map((el, index) => {
+                return <NewCard new={el} key={index} />;
+              })}
+          </div>
+        </div>
       </div>
-      <BodyNews />
       <Footer />
-    </>
+    </div>
   );
 };
 

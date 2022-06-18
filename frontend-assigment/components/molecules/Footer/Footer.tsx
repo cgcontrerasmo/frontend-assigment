@@ -5,27 +5,27 @@ type Props = {};
 
 const Footer: FC<Props> = ({}) => {
   return (
-    <div className="container-fluid">
+    <div className="container-fluid containerFooter">
       <div className="row">
         <div className="col-2 d-flex justify-content-center align-items-center">
           <Image
-            src="/images/logoDocRed.png"
+            src="/images/logo-docred-color.svg"
             alt="logoDocRed"
             width="100%"
             height="100%"
           />
         </div>
         <div className="col-2 d-flex justify-content-center align-items-center">
-          <a>Preguntas frecuentes</a>
+          <a href="#">Preguntas frecuentes</a>
         </div>
         <div className="col-2 d-flex justify-content-center align-items-center">
-          <a>Contáctanos</a>
+          <a href="#">Contáctanos</a>
         </div>
         <div className="col-2 d-flex justify-content-center align-items-center">
-          <a>Información</a>
+          <a href="#">Información</a>
         </div>
         <div className="col-4 d-flex justify-content-center align-items-center">
-          <p>DocRed 2019. todos los derechos reservados</p>
+          <p>DocRed © 2019. todos los derechos reservados</p>
         </div>
       </div>
     </div>
