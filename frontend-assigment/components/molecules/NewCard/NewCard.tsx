@@ -8,7 +8,7 @@ const NewCard: FC<Props> = ({}) => {
   }, []);
 
   return (
-    <div className="card">
+    <div className="card newCard">
       <div className="container">
         <div className="col-6"></div>
         <div className="col-6">
