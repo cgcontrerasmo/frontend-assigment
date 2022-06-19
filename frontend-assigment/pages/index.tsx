@@ -8,12 +8,12 @@ const Home: NextPage = () => {
   return (
     <div className="containerIndex">
       <Header />
-      <div className="container my-5">
+      <div className="container-fluid my-5 px-5">
         <div className="row">
-          <div className="col-8">
+          <div className="col-12 col-xl-8">
             <BodyNews />
           </div>
-          <div className="col-4">
+          <div className="col-12 col-xl-4">
             <ContainerNewCars />
           </div>
         </div>

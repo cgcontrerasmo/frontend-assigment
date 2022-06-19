@@ -1,7 +1,12 @@
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
 .containerSearch {
-  width: fit-content;
   .containerButton {
-    width: fit-content;
+    @include media-breakpoint-up(lg) {
+      width: fit-content;
+    }
     .buttonSearch {
       border-radius: 10px 0px 0px 0px;
       border: none;
@@ -15,11 +20,9 @@
     }
   }
   .containerInput {
-    width: fit-content;
     .inputSearch {
       border: none;
       border-radius: 0px 0px 10px 0px;
-      width: 420px;
       padding: 8px;
     }
   }

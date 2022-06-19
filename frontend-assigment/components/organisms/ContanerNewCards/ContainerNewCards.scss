@@ -1,10 +1,18 @@
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
 .containerNewCards {
   .newCards {
-    overflow-y: hidden;
-    height: 1075px;
-    width: fit-content;
-    &:hover {
-      overflow-y: scroll;
+    @include media-breakpoint-up(xl) {
+      height: 1075px;
+      overflow-y: hidden;
+      &:hover {
+        overflow-y: scroll;
+      }
+    }
+    @include media-breakpoint-down(xl) {
+      overflow-x: scroll;
     }
   }
 }

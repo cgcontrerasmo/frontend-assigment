@@ -1,31 +1,41 @@
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
 .newCard {
   border-radius: 0px;
+  @include media-breakpoint-down(xl) {
+    min-width: fit-content;
+  }
   padding: 24px 8px;
-  min-width: 480px !important;
   overflow: hidden;
   height: 215px;
   margin: 0px;
-  img {
-    object-fit: cover;
-    height: 100%;
+  max-width: none !important;
+  .aNewCard {
     width: 100%;
-    border-radius: 10px;
-  }
-  p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: gray;
-  }
-  .cardtitle {
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-  }
-  .bi {
-    color: blue;
-    margin: 0px 8px;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+    }
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: gray;
+    }
+    .cardtitle {
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+    }
+    .bi {
+      color: blue;
+      margin: 0px 8px;
+    }
   }
 }

@@ -19,7 +19,12 @@ const BodyNews: FC<Props> = ({}) => {
   return (
     <div className="container-fluid bodyNews py-5">
       <div className="row">
-        <img src="./images/principalImage.png" />
+        <img
+          src="./images/principalImage.png"
+          width="100%"
+          height="100%"
+          alt="principalImage"
+        />
       </div>
       <div className="row align-items-center my-4">
         <div className="col-7">
@@ -31,7 +36,12 @@ const BodyNews: FC<Props> = ({}) => {
       </div>
       <div className="row px-0">
         <div className="col-2 px-0 justify-content-center d-flex">
-          <img src="/images/newImages.png" width="70%" height="100%" />
+          <img
+            src="/images/newImages.png"
+            width="70%"
+            height="100%"
+            alt="imageDecoration"
+          />
         </div>
         <div className="col">
           <div className="row">

@@ -17,7 +17,7 @@ const ContainerNewCars: FC<Props> = (props) => {
   }, []);
 
   return (
-    <div className="container containerNewCards">
+    <div className="container-fluid containerNewCards">
       <div className="row">
         <div className="col">
           <p>Noticias relacionadas</p>
@@ -26,8 +26,8 @@ const ContainerNewCars: FC<Props> = (props) => {
           <hr />
         </div>
       </div>
-      <div className="row newCards">
-        <div className="col">
+      <div className="row px-0 mx-0 newCards">
+        <div className="col-12 px-0 mx-0 d-flex d-xl-block">
           {news.length > 0 &&
             news.map((el, index) => {
               return <NewCard new={el} key={index} />;

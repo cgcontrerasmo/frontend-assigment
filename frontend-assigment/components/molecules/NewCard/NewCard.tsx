@@ -5,8 +5,13 @@ type Props = { new: New };
 
 const NewCard: FC<Props> = (props: Props) => {
   return (
-    <a href={props.new?.link} target="_blank" rel="noreferrer">
-      <div className="card newCard">
+    <div className="card newCard">
+      <a
+        href={props.new?.link}
+        target="_blank"
+        rel="noreferrer"
+        className="aNewCard"
+      >
         <div className="container-fluid">
           <div className="row">
             <div className="col-6 d-flex align-items-center">
@@ -42,8 +47,8 @@ const NewCard: FC<Props> = (props: Props) => {
             </div>
           </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
   );
 };
 

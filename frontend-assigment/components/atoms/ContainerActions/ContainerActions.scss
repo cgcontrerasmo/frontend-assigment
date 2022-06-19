@@ -3,8 +3,12 @@
   border-radius: 10px 0px 10px 0px;
   padding: 8px 8px;
   width: fit-content;
-  .bi {
-    color: blue;
-    margin: 0px 8px;
+  .button {
+    background: transparent;
+    border: none;
+    .bi {
+      color: blue;
+      margin: 0px 8px;
+    }
   }
 }
