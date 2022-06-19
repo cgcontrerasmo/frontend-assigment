@@ -1,0 +1,10 @@
+.containerNewCards {
+  .newCards {
+    overflow-y: hidden;
+    height: 1075px;
+    width: fit-content;
+    &:hover {
+      overflow-y: scroll;
+    }
+  }
+}

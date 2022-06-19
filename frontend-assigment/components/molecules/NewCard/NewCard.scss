@@ -1,9 +1,10 @@
 .newCard {
-  border-radius: 15px 15px 0px 0px;
+  border-radius: 0px;
   padding: 24px 8px;
   min-width: 480px !important;
   overflow: hidden;
   height: 215px;
+  margin: 0px;
   img {
     object-fit: cover;
     height: 100%;
@@ -19,7 +20,7 @@
   .cardtitle {
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     overflow: hidden;
     -webkit-box-orient: vertical;
   }

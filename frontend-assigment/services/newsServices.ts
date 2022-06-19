@@ -13,3 +13,7 @@ const options = {
 export const getNews = (): Promise<any> => {
   return axios.request(options);
 };
+
+export const getBodyNew = (): Promise<any> => {
+  return axios.get(`http://localhost:8000/data`)
+}

@@ -2,4 +2,18 @@
   padding: 32px;
   background: white;
   border-radius: 15px;
+  .buttonSave {
+    border-radius: 15px 0px 15px 0px;
+    padding: 4px 16px;
+    border: none;
+    background: rgb(101, 179, 46);
+    color: white;
+  }
+  .info {
+    color: rgb(188, 188, 188);
+  }
+  .description {
+    text-align: justify;
+    font-size: 16px;
+  }
 }

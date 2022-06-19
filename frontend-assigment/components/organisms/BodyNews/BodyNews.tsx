@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
+import { getBodyNew } from "../../../services/newsServices";
 import Chip from "../../atoms/Chip/Chip";
 import ContainerActions from "../../atoms/ContainerActions/ContainerActions";
 //import {data} from "../../../services/article.json";
@@ -7,41 +8,60 @@ import ContainerActions from "../../atoms/ContainerActions/ContainerActions";
 type Props = {};
 
 const BodyNews: FC<Props> = ({}) => {
-  const data =
-    '<h1>Demo article</h1><p>This is a demo article</p><h4>More information</h4><a href="https://placeholder.com"><img src="https://via.placeholder.com/150" width="150" alt="placeholder"/></a><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vestibulum dolor ac ornare dictum. Nulla sollicitudin eros ex, in condimentum lacus condimentum vel. Nullam dui eros, sagittis eget pellentesque nec, faucibus at elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur tincidunt, justo eget tristique dictum, lorem lorem ultricies enim, ac rhoncus nisl arcu ac tellus. Integer placerat ante dolor, sed tristique lectus ullamcorper sit amet. Proin porta urna ac risus faucibus, vitae viverra magna lobortis. Vivamus fringilla, ipsum sit amet facilisis tempus, sapien nisi gravida augue, vitae vehicula ipsum neque sed mi. Sed vitae ante iaculis, aliquam erat laoreet, tristique tellus. Duis sed neque risus. Mauris commodo blandit leo, non commodo nisi congue ac. Cras nec dignissim felis. Proin viverra molestie porta. Fusce a fermentum ligula. Praesent ac mauris vitae nisi aliquam convallis ac ut enim.</p><p>Pellentesque ornare dui nec tincidunt placerat. Vivamus maximus, lorem sit amet gravida tempor, diam neque pretium nunc, eu tincidunt orci ipsum non libero. Nam ac tellus ac est vestibulum eleifend. Integer fermentum luctus semper. Etiam ullamcorper fringilla nibh, a aliquam libero mollis sed. Suspendisse est nulla, auctor et erat eget, efficitur convallis dui. Integer bibendum diam quis odio mollis volutpat ut egestas risus. In efficitur, sapien nec elementum sodales, lorem quam laoreet felis, vel congue arcu felis in mi. Duis eleifend massa augue, vel faucibus ligula interdum quis. Pellentesque efficitur orci non malesuada pulvinar.</p><p>Integer ac ligula sagittis, vehicula sem a, tincidunt tortor. Maecenas a facilisis tellus. Cras tincidunt augue eget euismod pellentesque. Maecenas ut lacus pretium, facilisis sapien sed, molestie ante. Curabitur porttitor tincidunt dui, ac malesuada elit pretium vitae. Nunc pulvinar aliquet enim id sodales. Pellentesque nec sodales ante. Aliquam erat volutpat. Maecenas accumsan luctus aliquet. Suspendisse ut feugiat erat. Aliquam sodales cursus arcu eget pellentesque. Sed pellentesque est quis leo lacinia, ut commodo turpis volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur nec nibh ut nibh congue pretium et ac felis. Nam hendrerit leo in mi facilisis, et posuere est pulvinar. Nullam a ex at sapien facilisis rutrum.</p><p>Fusce vel velit eu ligula cursus commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In sit amet sapien a arcu consequat tempor. Sed sed tincidunt nibh. Aenean accumsan ligula non tincidunt sollicitudin. Proin iaculis imperdiet vestibulum.</p><p>Aliquam pharetra pulvinar lectus porttitor rutrum. Ut in lacinia libero, a hendrerit neque. Donec a sollicitudin mi. Aliquam et nulla laoreet, ultricies nulla ac, convallis mi. Vestibulum non libero interdum, fringilla leo at, maximus nibh. Curabitur fringilla in risus vitae ornare. Duis lectus odio, lacinia venenatis lacinia ac, efficitur nec tortor. Aliquam cursus massa massa, sed facilisis justo posuere non. Pellentesque non nulla mauris.</p>';
+  const [data, setData] = useState("");
+
+  useEffect(() => {
+    getBodyNew().then((res) => {
+      setData(res.data[0].content);
+    });
+  });
+
   return (
     <div className="container-fluid bodyNews py-5">
       <div className="row">
         <img src="./images/principalImage.png" />
       </div>
-      <div className="row">
-        <div className="col">
-          <h1>Lorem ipsum dolor: Volutpat consequat</h1>
+      <div className="row align-items-center my-4">
+        <div className="col-7">
+          <h4>Lorem ipsum dolor: Volutpat consequat</h4>
         </div>
-        <div className="col-1">
-          <Chip message="Guardar" />
+        <div className="col-2">
+          <button className="buttonSave">Guardar</button>
         </div>
       </div>
-      <div className="row">
-        <div className="col"></div>
+      <div className="row px-0">
+        <div className="col-2 px-0 justify-content-center d-flex">
+          <img src="/images/newImages.png" width="70%" height="100%" />
+        </div>
         <div className="col">
           <div className="row">
-            <p>Noticias DocRed</p>
+            <div className="col">
+              <b className="my-0">Noticias DocRed</b>
+            </div>
           </div>
           <div className="row">
-            <div className="col">Hace 12h</div>
-            <div className="col">Publicado: 17/01/18</div>
-            <div className="col">Lectura: 3min</div>
+            <p className="info">
+              Hace 12h | Publicado: 17/01/18 | Lectura: 3min
+            </p>
           </div>
         </div>
       </div>
       <div className="row">
-        <Chip message="Medicina interna" />
-        <Chip message="Pediatría" />
-        <Chip message="Obstecticia" />
+        <div className="col">
+          <div className="row">
+            <Chip message="Medicina interna" />
+            <Chip message="Pediatría" />
+            <Chip message="Obstecticia" />
+          </div>
+        </div>
       </div>
       <div className="row">
-        <div dangerouslySetInnerHTML={{ __html: data }} />
+        <div className="col">
+          <div
+            dangerouslySetInnerHTML={{ __html: data.split("</a>")[1] }}
+            className="description"
+          />
+        </div>
       </div>
       <div className="row justify-content-center">
         <ContainerActions />
