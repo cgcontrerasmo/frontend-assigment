@@ -48,6 +48,10 @@ Con el fin de instalar todas los archivos necesarios para el funcionamiento
 
 Esto con el fin de instalar un servidor local necesario para el funcionamiento correcto de la página.
 
+Antes de continuar, es necesario tener yarn instalado en su sistema, para ello puede ejecutar el siguiente comando
+
+### `npm install --global yarn`
+
 seguido a esto verificar que se tiene disponible el puerto 8000 del localhost y ejecutar:
 
 ### `yarn server`
